@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SemencesCertifiées</title>
+  <link rel="stylesheet" href="../css/lab.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <main>
+      <div class="centered">
+        <img src="../img/logo-wide.png" alt="SemencesCertifiées Logo Wide">
+      </div>
+      <br>
+      <h1 style="text-align: center;">SemencesCertifiées - Laboratory Login</h1>
+      <br>
+      <br>
+      <div id="ict4d-login" class="centered">
+        <form id="ict4d-login-form">
+          <label for="phone">Username:</label>
+          <input type="text" id="username" name="username" value="lb1" required><br>
+          <label for="pin">Password:</label>
+          <input type="password" id="password" name="password" minlength="4" maxlength="4" value="test" required><br>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+      <div id="ict4d-open" class="centered">
+        <button id="ict4d-show-cert" type="button">Show certificates</button>
+      </div>
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="/impressum">Impressum</a></li>
+          <li><a href="/">Farmer's Login</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2023 SemencesCertifiées. All rights reserved.</p>
+    </footer>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="../js/lab.js"></script>
+</body>
+
+</html>

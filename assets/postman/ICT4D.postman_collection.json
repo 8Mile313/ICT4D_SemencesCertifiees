@@ -1,0 +1,502 @@
+{
+	"info": {
+		"_postman_id": "9fccc738-275c-4960-a3a1-81f70d7b2df9",
+		"name": "ICT4D",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "laboratory",
+			"item": [
+				{
+					"name": "Login into Laboratory User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"lb1\",\r\n    \"password\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}laboratory/login",
+							"host": [
+								"{{url}}laboratory"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout Laboratory User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"lb1\",\r\n    \"password\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}laboratory/logout",
+							"host": [
+								"{{url}}laboratory"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check if Laboratory User is signed in",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"lb1\",\r\n    \"password\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}laboratory/signedin",
+							"host": [
+								"{{url}}laboratory"
+							],
+							"path": [
+								"signedin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account Info of Laboratory User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}laboratory/account",
+							"host": [
+								"{{url}}laboratory"
+							],
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Laboratory User Certficiates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}laboratory/certificates?search=123213",
+							"host": [
+								"{{url}}laboratory"
+							],
+							"path": [
+								"certificates"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "123213"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "farmer",
+			"item": [
+				{
+					"name": "Login into Farmer User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\": \"081273912321\",\r\n    \"pin\": 1231\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}farmer/login",
+							"host": [
+								"{{url}}farmer"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout Farmer User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}farmer/logout",
+							"host": [
+								"{{url}}farmer"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check if Farmer User is signed in",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"lb1\",\r\n    \"password\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}farmer/signedin",
+							"host": [
+								"{{url}}farmer"
+							],
+							"path": [
+								"signedin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account Info of Farmer User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}farmer/account",
+							"host": [
+								"{{url}}farmer"
+							],
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Farmer User Certficiates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}farmer/certificates",
+							"host": [
+								"{{url}}farmer"
+							],
+							"path": [
+								"certificates"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "certificate",
+			"item": [
+				{
+					"name": "Add new certificate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\": \"08127333912321\",\r\n    \"pin\": 1231,\r\n    \"species\": \"Millet\",\r\n    \"campaign\": \"2019-2020\",\r\n    \"germination\": \"0.22\",\r\n    \"variety\": \"Tooniou C1\",\r\n    \"batch_number\": 31,\r\n    \"purity\": 0.996\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}certificate/",
+							"host": [
+								"{{url}}certificate"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update certificate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"phone\": \"081273912321\",\r\n    \"pin\": 1231,\r\n    \"species\": \"Millet\",\r\n    \"campaign\": \"2019-2020\",\r\n    \"germination\": 0.98,\r\n    \"variety\": \"NEW VARIETY\",\r\n    \"batch_number\": 31,\r\n    \"purity\": 0.996\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}certificate/update",
+							"host": [
+								"{{url}}certificate"
+							],
+							"path": [
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete certificate",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}certificate",
+							"host": [
+								"{{url}}certificate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show certificate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}certificate/view/:viewId",
+							"host": [
+								"{{url}}certificate"
+							],
+							"path": [
+								"view",
+								":viewId"
+							],
+							"variable": [
+								{
+									"key": "viewId",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One certificate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}certificate/:id",
+							"host": [
+								"{{url}}certificate"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "voicexml",
+			"item": [
+				{
+					"name": "account exists",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<Data>\r\n    <Apikey>{{api_key}}</Apikey>\r\n    <Phone>081273912321</Phone>\r\n</Data>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}voicexml/user-exists.xml",
+							"host": [
+								"{{url}}voicexml"
+							],
+							"path": [
+								"user-exists.xml"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get certificates",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<Data>\r\n    <Apikey>{{api_key}}</Apikey>\r\n    <Phone>081273912321</Phone>\r\n    <Page>1</Page>\r\n</Data>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}voicexml/certificates.xml",
+							"host": [
+								"{{url}}voicexml"
+							],
+							"path": [
+								"certificates.xml"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get certificate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<Data>\r\n    <Apikey>{{api_key}}</Apikey>\r\n    <Phone>081273912321</Phone>\r\n    <CertificateId>1</CertificateId>\r\n</Data>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}voicexml/certificate.xml",
+							"host": [
+								"{{url}}voicexml"
+							],
+							"path": [
+								"certificate.xml"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Healthcheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://api.semencescertifiees.elch.cc/",
+			"type": "default"
+		},
+		{
+			"key": "api_key",
+			"value": "a13c2c03-f82f-4d39-935f-228a638988a7",
+			"type": "default"
+		}
+	]
+}

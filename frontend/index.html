@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SemencesCertifiées</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <main>
+      <div class="centered">
+        <img src="img/logo-wide.png" alt="SemencesCertifiées Logo Wide">
+      </div>
+      <br>
+      <div id="ict4d-login" class="centered">
+        <form id="ict4d-login-form">
+          <label id="lan-phone" for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" value="081273912321" required><br>
+          <label id="lan-pin" for="pin">Pin Code:</label>
+          <input type="password" id="pin" name="pin" minlength="4" maxlength="4" value="1231" required><br>
+          <button id="lan-login" type="submit">Login</button>
+        </form>
+      </div>
+      <div id="ict4d-open" class="centered">
+        <button id="ict4d-show-certs" type="button">Show certificates</button>
+      </div>
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          <li><a id="lan-impressum" href="/impressum">Impressum</a></li>
+          <li><a id="lan-lab-login" href="/lab">Laboratory's Login</a></li>
+          <li><a id="lan-fr" href="?lan=fr">Français<a></li>
+          <li><a id="lan-en" href="?lan=en">English<a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2023 SemencesCertifiées. All rights reserved.</p>
+    </footer>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="js/index.js?id=2"></script>
+</body>
+
+</html>
